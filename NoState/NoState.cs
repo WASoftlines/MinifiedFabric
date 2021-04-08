@@ -6,6 +6,7 @@ using System.Fabric;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using CommandEngine;
 
 namespace NoState
 {
@@ -36,6 +37,8 @@ namespace NoState
             // TODO: Replace the following sample code with your own logic 
             //       or remove this RunAsync override if it's not needed in your service.
 
+            CommandEngineHelper.DoLog($"Logged from {nameof(NoState)} StatelessService");
+            
             long iterations = 0;
 
             while (true)
